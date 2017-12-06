@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>河流测试</title>
+    <style type="text/css">
+        html{height:100%}
+        body{height:100%;margin:0px;padding:0px}
+        #container{height:100%}
+    </style>
+
+</head>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=WqmuKyDOZbwAqQOXw4YkPF2TNNWqLs9U"></script>
+<body>
+    <div id="container"></div>
+</body>
+<script type="text/javascript">
+    var map = new BMap.Map("container");
+    // 创建地图实例
+    var point = new BMap.Point(116.404, 39.915);
+    // 创建点坐标
+    map.centerAndZoom(point, 15);
+    // 初始化地图，设置中心点坐标和地图级别
+    map.addControl(new BMap.NavigationControl());
+    window.setTimeout(function(){
+        map.panTo(new BMap.Point(112.7985358431298,28.62958532335373));
+        dropLine();
+    }, 2000);
+
+    function dropLine(){
+        var polyline = new BMap.Polyline([
+                    new BMap.Point(112.7985358431298,28.62958532335373),
+                    new BMap.Point(112.8032342120539,28.63263579046288),
+                    new BMap.Point(112.8172360929594,28.63152967409337),
+                    new BMap.Point(112.8225051309394,28.63252729566078),
+                    new BMap.Point(112.8231206456104,28.63662405243097),
+                    new BMap.Point(112.8219852349914,28.64073079680328),
+                    new BMap.Point(112.8237731828566,28.64584483130169),
+                    new BMap.Point(112.8360591811685,28.64884841582341),
+                    new BMap.Point(112.8483101341607,28.64723878401031),
+                    new BMap.Point(112.8582810326581,28.65281662693777),
+                    new BMap.Point(112.8700298894091,28.66145807599641),
+                    new BMap.Point(112.8730336276962,28.67219922913147),
+                    new BMap.Point(112.8707818703445,28.68297162882629),
+                    new BMap.Point(112.8656062326137,28.69325129234048),
+                    new BMap.Point(112.8592977481217,28.70816498359725),
+                    new BMap.Point(112.8436174903191,28.72107825279212),
+                    new BMap.Point(112.8395907826544,28.72982456060084),
+                    new BMap.Point(112.8373566130504,28.74368451246156),
+                    new BMap.Point(112.8374829697563,28.76008118280503)
+                ],
+                {strokeColor:"blue", strokeWeight:6, strokeOpacity:0.5}
+        );
+        var baiduline = new BMap.Polyline([
+                    new BMap.Point(112.81051844294,
+                            28.632622151267),
+                    new BMap.Point(112.8152165912,
+                            28.635642705464),
+                    new BMap.Point(112.82923117501,
+                            28.634337814644),
+                    new BMap.Point(112.83451359397,
+                            28.635232852372),
+                    new BMap.Point(112.83512758694,
+                            28.639318888454),
+                    new BMap.Point(112.83398572272,
+                            28.643452186051),
+                    new BMap.Point(112.83578260667,
+                            28.648528949058),
+                    new BMap.Point(112.8480922847,
+                            28.651301696481),
+                    new BMap.Point(112.86035453841,
+                            28.649546842646),
+                    new BMap.Point(112.8703124803,
+                            28.655099836512),
+                    new BMap.Point(112.88202279,
+                            28.66383210747),
+                    new BMap.Point(112.88502086403,
+                            28.674618698417),
+                    new BMap.Point(112.88279766306,
+                            28.685367705446),
+                    new BMap.Point(112.87764769191,
+                            28.695603532456),
+                    new BMap.Point(112.87137343583,
+                            28.710493832029),
+                    new BMap.Point(112.85570709527,
+                            28.72348396435),
+                    new BMap.Point(112.85167310858,
+                            28.732284116915),
+                    new BMap.Point(112.84941824325,
+                            28.746179348064),
+                    new BMap.Point(112.8495357625,
+                            28.762587399175)
+                ],
+                {strokeColor:"yellow", strokeWeight:6, strokeOpacity:0.5}
+        );
+        var gcj = new BMap.Polyline([
+                    new BMap.Point(112.80410901612,
+                            28.626292874066),
+                    new BMap.Point(112.80880306554,
+                            28.629341298522),
+                    new BMap.Point(112.82277127575,
+                            28.628214162764 ),
+                    new BMap.Point(112.82803152173,
+                            28.629199997134),
+                    new BMap.Point(112.82864620388,
+                            28.633297745335),
+                    new BMap.Point(112.82751235002,
+                            28.637411650329),
+                    new BMap.Point(112.82930375434,
+                            28.642520786802),
+                    new BMap.Point(112.84156206979,
+                            28.645499557636),
+                    new BMap.Point(112.85379130691,
+                            28.64387266959),
+                    new BMap.Point(112.86374760294,
+                            28.649436619316),
+                    new BMap.Point(112.87548146164,
+                            28.658069422923),
+                    new BMap.Point(112.8784831071,
+                            28.668812962038),
+                    new BMap.Point(112.8762417372,
+                            28.679590505937),
+                    new BMap.Point(112.87106653155,
+                            28.689883708501),
+                    new BMap.Point(112.86477152727,
+                            28.704816736578),
+                    new BMap.Point(112.84911642377,
+                            28.717765318298),
+                    new BMap.Point(112.84509886757,
+                            28.726522410884),
+                    new BMap.Point(112.84286445205,
+                            28.740391309206),
+                    new BMap.Point(112.8429961401,
+                            28.756804704837)
+                ],
+                {strokeColor:"red", strokeWeight:6, strokeOpacity:0.5}
+        );
+        map.addOverlay(polyline);
+        map.addOverlay(baiduline);
+        map.addOverlay(gcj);
+    }
+</script>
+</html>
