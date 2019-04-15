@@ -4,4 +4,4 @@
 
 调用高德地图二次开发接口展示，3000多条汇总和单条河流的轨迹。
 
-发布在[河流百科](http://wiki.riverwatcher.org.cn/index.php?river)
+发布在[河流百科](http://www.ibluelink.com/index.php)
